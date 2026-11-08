@@ -1,0 +1,58 @@
+name: Publicar en GitHub Pages
+
+# 1. CUÁNDO SE EJECUTA: Cada vez que subas cambios a la rama "main" (o manualmente)
+on:
+  push:
+    branches: ['main']
+  workflow_dispatch:
+
+# 2. PERMISOS: Autoriza a GitHub Actions a leer el código y publicar en GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Evita que dos despliegues se pisen si haces dos cambios seguidos rápido
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      # Paso A: Descarga el código de tu repositorio en una máquina virtual de GitHub
+      - name: Descargar código del repositorio
+        uses: actions/checkout@v4
+
+      # Paso B: Instala Node.js v20 en la máquina de GitHub
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      # Paso C: Instala las librerías del proyecto (React, Tailwind, Vite)
+      - name: Instalar dependencias
+        run: npm install
+
+      # Paso D: Compila el proyecto React y genera la carpeta "dist" lista para internet
+      - name: Construir página (Build)
+        run: npm run build
+
+      # Paso E: Configura GitHub Pages y sube el contenido de la carpeta "dist"
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Subir carpeta dist a GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'
+
+      - name: Publicar sitio en vivo
+        id: deployment
+        uses: actions/deploy-pages@v4
+
