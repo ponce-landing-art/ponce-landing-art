@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ponce.Art — Perfiles Oficiales (Vista Previa)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 45%, #AA8222 75%, #F3E5AB 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-border-glow {
+      box-shadow: 0 0 28px -6px rgba(212, 175, 55, 0.22), inset 0 0 14px -8px rgba(212, 175, 55, 0.18);
+    }
+    .luxury-card {
+      background: linear-gradient(180deg, rgba(24, 24, 28, 0.92) 0%, rgba(13, 13, 16, 0.97) 100%);
+      backdrop-filter: blur(16px);
+    }
+    .serif-luxury {
+      font-family: Georgia, "Times New Roman", serif;
+    }
+  </style>
+</head>
+<body class="bg-[#070708] text-[#F5F2EB] antialiased min-h-screen flex items-center justify-center py-8 px-4">
+  <main class="w-full max-w-[420px] rounded-[28px] border-[2px] border-[#2A2823] bg-[#0B0B0C] px-5 py-8 sm:px-7 sm:py-10 shadow-[0_0_55px_rgba(0,0,0,0.9)] relative overflow-hidden">
+    <div class="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-56 w-72 rounded-full bg-[#D4AF37]/10 blur-[85px]"></div>
+
+    <header class="relative z-10 text-center space-y-2.5">
+      <div class="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-full border border-[#D4AF37]/50 bg-gradient-to-b from-[#1C1B18] to-[#0D0D0F] gold-border-glow">
+        <span class="serif-luxury text-xl font-bold tracking-wider gold-gradient-text">PA</span>
+      </div>
+
+      <div class="flex items-center justify-center gap-2.5">
+        <svg class="w-12 h-5 text-[#D4AF37]" viewBox="0 0 120 32" fill="none">
+          <path d="M2 22C22 22 28 10 36 10C42 10 44 18 38 20C32 22 30 14 38 10C48 5 62 24 76 14C82 10 80 4 75 6C70 8 72 18 85 18C98 18 106 8 118 16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <h1 class="serif-luxury italic text-3xl sm:text-4xl text-[#F5F2EB]">
+          Ponce.<span class="text-[#D4AF37]">Art</span>
+        </h1>
+        <svg class="w-12 h-5 text-[#D4AF37] scale-x-[-1]" viewBox="0 0 120 32" fill="none">
+          <path d="M2 22C22 22 28 10 36 10C42 10 44 18 38 20C32 22 30 14 38 10C48 5 62 24 76 14C82 10 80 4 75 6C70 8 72 18 85 18C98 18 106 8 118 16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="space-y-1 pt-0.5">
+        <p class="serif-luxury text-base sm:text-lg tracking-wide text-[#F3E5AB]">
+          Jelvis J. Ponce E.
+        </p>
+        <p class="text-xs uppercase tracking-[0.18em] text-[#A39E93]">
+          Artista Panameño · Hiperrealismo
+        </p>
+      </div>
+    </header>
+
+    <section class="relative z-10 mt-7 space-y-3.5">
+      <div class="flex items-center gap-3">
+        <div class="h-px flex-1 bg-gradient-to-r from-transparent to-[#D4AF37]/40"></div>
+        <h2 class="serif-luxury text-xs sm:text-sm uppercase tracking-[0.22em] text-[#D4AF37]">
+          Conecta con mi Arte
+        </h2>
+        <div class="h-px flex-1 bg-gradient-to-l from-transparent to-[#D4AF37]/40"></div>
+      </div>
+
+      <div class="grid grid-cols-1 gap-3">
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/" target="_blank" class="group luxury-card flex items-center gap-3.5 rounded-xl p-4 border border-[#D4AF37]/45 gold-border-glow hover:border-[#F3E5AB] transition-all">
+          <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-[#D4AF37]/40 bg-[#D4AF37]/10 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#0B0B0C] transition-colors">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </div>
+          <div class="min-w-0 flex-1">
+            <div class="serif-luxury text-base font-semibold text-[#F5F2EB] group-hover:text-[#F3E5AB] leading-snug">Instagram Oficial</div>
+            <div class="text-xs text-[#D4AF37] font-medium">@ponce.art</div>
+            <div class="text-xs text-[#A39E93] truncate mt-0.5">Proceso de obras, retratos hiperrealistas y galería reciente</div>
+          </div>
+          <div class="text-[#D4AF37]/70 group-hover:translate-x-0.5 transition-transform">↗</div>
+        </a>
+
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/" target="_blank" class="group luxury-card flex items-center gap-3.5 rounded-xl p-4 border border-[#D4AF37]/45 gold-border-glow hover:border-[#F3E5AB] transition-all">
+          <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-[#D4AF37]/40 bg-[#D4AF37]/10 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#0B0B0C] transition-colors">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+          </div>
+          <div class="min-w-0 flex-1">
+            <div class="serif-luxury text-base font-semibold text-[#F5F2EB] group-hover:text-[#F3E5AB] leading-snug">TikTok Oficial</div>
+            <div class="text-xs text-[#D4AF37] font-medium">@ponce.art</div>
+            <div class="text-xs text-[#A39E93] truncate mt-0.5">Videos de timelapse y técnica a grafito en vivo</div>
+          </div>
+          <div class="text-[#D4AF37]/70 group-hover:translate-x-0.5 transition-transform">↗</div>
+        </a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+
